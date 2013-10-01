@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <title>Skill Graphs</title>
+    
+    <style>
+		.container{
+			width:100%;
+			padding:30px;
+			}
+		.chart-container{
+			background:#CCC;
+			margin:auto;
+			box-shadow:1px 1px 3px black;
+			}	
+		
+		.ticks{
+			position:relative;
+			margin:auto;
+			
+			}
+		.tick{
+			border:1px solid black;
+			position:absolute;
+			height:2px;
+			}	
+		.ticklabel{
+			position:absolute;
+		}
+		.graph{
+			
+			margin:auto;
+			position:relative;
+			font-size:12px;
+			color:white;
+			font-weight:bold;
+			
+			
+		}
+		.bar{
+			background:#9C0;
+			height:20px;
+			margin-bottom:7px;
+			}
+		
+	</style>
+</head>
+<body>
+	<h2>Chart to demonstrate quantity and percentage </h2>
+    <p>Widget with default values:-</p>
+	<div id="widget"></div>
+ 	<p>Widget with Custom values:-</p>
+   	<div id="widget2"></div>
+    <p>Widget with Custom values after initialisation:-</p>
+   	<div id="widget3"></div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="js/graph.js"></script>
+    <script>
+    	$(function(){
+                    
+					 $('#widget').graph(); 
+					 $('#widget2').graph({
+									size:300,
+									bars:[
+											{title:'PHP',value:'70'},
+											{title:'JQUERY',value:'80'},
+											{title:'HTML',value:'90'}
+											
+										],
+									ticks:[0,50,100]	
+									});
+					 $('#widget3').graph();  
+					 $('#widget3').graph('option','ticks',[0,10,20,30,40,50,60,70,80,90,100]);
+					 $('#widget3').graph('option','size',500); 
+					
+                });
+    </script>
+</body>
+</html>
