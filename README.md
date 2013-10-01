@@ -4,17 +4,13 @@ This is a graph chart widget which is used to demonstrate certain skill, rank or
 
 ----------------------------------------------------------------------------------------------------------
 It has been made using Jquery Widget Factory and is easily extendable.
+----------------------------------------------------------------------------------------------------------
 Configurable options are:-
-----------------------------------------------------------------------------------------------------------
+
 1) Width of the widget Container
-----------------------------------------------------------------------------------------------------------
-2)Bar title and value in percentage 
-      eg:-bars:[
-					{title:'PHP',value:'50'},
-					{title:'JQUERY',value:'80'},
-					{title:'HTML',value:'90'},
-					{title:'CSS',value:'90'}
-				],
+
+2) Bar title and value in percentage 
+      eg:-bars:[{title:'PHP',value:'50'}],
 ----------------------------------------------------------------------------------------------------------
 3)you can also change the interval of the scale
 
